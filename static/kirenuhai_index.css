@@ -1,0 +1,44 @@
+.chapter_card_block.chapter_card_block.chapter_card_block {
+  display: flex;
+  padding-bottom: 1.2rem;
+}
+
+.chapter_card_block > div {
+  display: flex;
+  width: 50%;
+}
+
+.chapter_card_block > .content_info {  
+  justify-content: center;
+  align-items: center;
+}
+
+.chapter_card_block > :not(.content_info) {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+div > .content_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_info > :is(.title.title.title.title, .date.date.date) {
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .chapter_card_block {
+    flex-direction: column;
+  }
+  
+  .chapter_card_block > div {
+    width: 100%;
+  }
+  
+  .chapter_card_block > :not(.content_info) {
+    align-items: center;
+  }
+}
